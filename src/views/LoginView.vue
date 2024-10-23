@@ -2,7 +2,7 @@
   <div>
          <div class="bg-slate-100 text-black">
           <div class="w-full h-[100vh] flex items-center overflow-x-hidden relative">
-            <div class="hidden desktop:flex w-[45rem] h-full bg-gray-900 relative overflow-hidden  justify-center items-center pr-3">
+            <div class="hidden desktop:flex w-[45rem] h-full bg-gray-900 relative overflow-hidden  justify-center items-center pr-3" data-aos="zoom-in-right">
               <img src="../assets/image/caracter.png" alt="cover-wallet" class="w-[30rem]  transform -rotate-90 translate-x-20  object-cover">
             </div>
             <div class="w-full h-full child:font-Roboto">
@@ -19,25 +19,29 @@
                         <span @click="cheangTypeInput($event)" id="mobilebtn" class="py-2 px-6 inline-flex rounded-full text-sm">Mobile</span>
                       </div>
                       <form class="flex flex-col w-[25rem]">
-                        <label ref="labelinput" for="email" class="text-slate-300 text-sm mb-1">EMAIL</label>
-                        <input ref="inputform" type="email" class="py-2 px-3 border-2 mb-5 border-slate-300 rounded-lg outline-none bg-transparent" placeholder="Email address" id="email">
+                        <label v-if="!TypeSendData" ref="labelinput" for="email" class="text-slate-300 text-sm mb-1">EMAIL</label>
+                        <input v-if="!TypeSendData" ref="inputform" type="email" class="py-2 px-3 border-2 mb-5 border-slate-300 rounded-lg outline-none bg-transparent" placeholder="Email address" id="email">
+                    <LoginSendnumber v-if="TypeSendData"></LoginSendnumber>
                         <label for="password" class="text-slate-300 text-sm mb-1">PASSWORD</label>
-                        <div class="flex items-center flex-row-reverse border-2 border-slate-300 rounded-lg py-2 px-3">
+                        <div class="flex items-center flex-row-reverse border-2 border-slate-300 rounded-lg !py-2 px-3">
                           <svg @click="cheangTypePassword()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 cursor-pointer">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                           </svg>                          
-                          <input ref="inputpassword" type="text" placeholder="Password" class="w-full h-full bg-transparent border-none outline-none" id="password">
+                          <input ref="inputpassword" type="text" placeholder="Password" class="w-full h-full bg-transparent !border-none !outline-none" id="password">
                         </div>
                       </form>
                       <div class="w-[24rem] my-5 flex justify-between">
                         <span class="text-slate-400 text-sm font-extrabold">Scan to login</span>
-                        <span class="text-blue-500  tracking-tight font-extrabold">Forgot Password?</span>
+                        <span class="text-blue-500  tracking-tight font-extrabold cursor-pointer">Forgot Password?</span>
                       </div>
                       <button class="text-white bg-blue-500 w-[25rem] rounded-full py-2">Login</button>
                  </div>
             </div>
-            <div class="absolute w-full h-[7rem] top-0 left-0 ">
+
+
+
+            <div class="absolute w-full h-[7rem] top-0 left-0 " data-aos="flip-up" data-aos-duration="1000">
               <div class="w-full h-full flex  items-center  tablet:flex-row-reverse flex-col-reverse tablet:justify-between gap-y-4 tablet:gap-y-0 pt-5 tablet:pt-0  tablet:px-12">
                 <div>
                   <p class="text-[1rem] font-extrabold font-Roboto">Don`t have an account ?   <router-link class="text-blue-500 cursor-pointer" to="/signup">Sign up for free</router-link></p>
@@ -53,29 +57,35 @@
   </div>
 </template>
 <script>
+ import LoginSendnumber from '@/components/LoginSendnumber.vue';
    export default {
+    components : {
+     LoginSendnumber
+    },
     data () {
       return {
-
+        TypeSendData : false
       }
     },
     methods : {
       cheangTypeInput : function (event) {
         const classToAdd = ['bg-black' , 'text-white'];
-        this.$refs.inputform.value = ''
+       // this.$refs.inputform.value = ''
         if (event.target.innerHTML === 'Mobile') {
+          this.TypeSendData = true 
           document.querySelector('#emailbtn').classList.remove(...classToAdd);
           event.target.classList.add(...classToAdd);
-          this.$refs.inputform.type = 'text';
-          this.$refs.inputform.placeholder = 'Number mobile';
-          this.$refs.labelinput.innerHTML = 'Mobile'
+          // this.$refs.inputform.type = 'text';
+          // this.$refs.inputform.placeholder = 'Number mobile';
+          // this.$refs.labelinput.innerHTML = 'Mobile'
           
         }else {
+          this.TypeSendData = false
           document.querySelector('#mobilebtn').classList.remove(...classToAdd);
           event.target.classList.add(...classToAdd);
-          this.$refs.inputform.type = 'email';
-          this.$refs.inputform.placeholder = 'Email address';
-          this.$refs.labelinput.innerHTML = 'Email'
+          // this.$refs.inputform.type = 'email';
+          // this.$refs.inputform.placeholder = 'Email address';
+          // this.$refs.labelinput.innerHTML = 'Email'
         }
         
       },
