@@ -12,7 +12,7 @@
                 <p class="text-slate-500">Get the code by email at <br> <span class="text-black text-lg">{{data}}</span></p>
             </li>
         </ul>
-        <button class="text-white bg-blue-500 w-[20rem] tablet:w-[22rem] rounded-full py-2">Continue</button>
+        <button class="text-white bg-blue-500 w-[20rem] tablet:w-[22rem] rounded-full py-2" @click="sendMSG()">Continue</button>
     </div>
 </template>
 <script>
@@ -20,6 +20,9 @@ export default  {
     name : 'SignupSendcode',
     props : ['data'],
     methods : {
+        sendMSG : function () {
+            this.$router.replace('/');
+        }
     }
 }
 </script>

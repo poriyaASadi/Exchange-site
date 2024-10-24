@@ -1,23 +1,18 @@
 <template>
-  
-  <div class="home">
-    <div>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/login">login</router-link>
-  </div>
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-slate-100">
+<HeaderComponent></HeaderComponent>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import HeaderComponent from '../components/HeaderComponent.vue'
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HeaderComponent
   }
 }
 </script>
+
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/login">login</router-link> -->

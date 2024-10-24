@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily : {
-        "Roboto" : "Roboto"
+        "Roboto" : "Roboto",
+        "Dim" : "Dim"
       },
       screens : {
         desktop : '1440px',
