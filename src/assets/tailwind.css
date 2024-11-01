@@ -1,0 +1,17 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "Roboto";
+        src: url('./Roboto/RobotoCondensed-SemiBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: "Dim";
+        src: url('./DIM/DMSans_36pt-Medium.ttf') format('truetype');
+    }
+}
