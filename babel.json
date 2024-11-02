@@ -1,6 +1,25 @@
 {
-  "stories": [],
-  "versions": [],
+  "stories": [
+    {
+      "title": "New story",
+      "created": 1730548562443,
+      "submissionHistory": {},
+      "versions": [
+        "b1f69721-65f1-43ad-b810-bff4fde6236a"
+      ],
+      "id": "ddaf3daf-f9c1-4818-a990-b583803186af"
+    }
+  ],
+  "versions": [
+    {
+      "storyId": "ddaf3daf-f9c1-4818-a990-b583803186af",
+      "name": "draft",
+      "wordCount": 0,
+      "created": 1730548562445,
+      "statistics": {},
+      "id": "b1f69721-65f1-43ad-b810-bff4fde6236a"
+    }
+  ],
   "backups": [],
   "activity": []
 }

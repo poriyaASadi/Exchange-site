@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
-    <div class="fixed top-0 left-0 w-full h-[6rem] child:font-Dim border-b bg-slate-50 shadow-sm">
-=======
     <div class="fixed top-0 left-0 w-full h-[6rem] child:font-Dim border-b bg-slate-50 shadow-sm z-10">
->>>>>>> a3629da (add code)
         <div class="flex items-center justify-between w-full  relative h-full px-2 tablet:px-5  laptop:px-20 desktop:px-32   z-0">
             <!-- left header -->
             <div class="flex items-center  gap-x-5 laptop:gap-x-20">
@@ -14,11 +10,7 @@
                  </div>
                  <!-- btn header item -->
                   <div class="hidden tablet:inline-block">
-<<<<<<< HEAD
-                    <ul class="flex items-center gap-x-3 laptop:gap-x-10 child:text-slate-400 child:text-lg  child:font-[600] transition-colors child:cursor-pointer">
-=======
                     <ul class="flex items-center gap-x-3 laptop:gap-x-5 desktop:gap-x-10 child:text-slate-400 child:text-lg  child:font-[600] transition-colors child:cursor-pointer">
->>>>>>> a3629da (add code)
                         <li class="hover:text-slate-600">Exchange</li>
                         <li class="hover:text-slate-600">Buy Crypto</li>
                         <li class="hover:text-slate-600">Market</li>
