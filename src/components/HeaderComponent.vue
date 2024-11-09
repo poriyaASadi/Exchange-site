@@ -67,11 +67,20 @@
              </div>
 
         </div>
+        <keep-alive>
+      
+      <ModalComponents></ModalComponents>
+
+        </keep-alive>
     </div>
 </template>
 <script>
+import ModalComponents from '../components/ModalComponents.vue';
 export default {
     name : 'HeaderComponent',
+    components : {
+        ModalComponents  
+    },
     methods : {
         showmenu : function () {
           const  menuMobileClass = this.$refs.menumobile;            

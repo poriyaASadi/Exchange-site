@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-50">
+  <div class="bg-slate-50 relative">
     <!-- header -->
     <HeaderComponent></HeaderComponent>
     <section class=" mt-[6rem] font-Dim">
@@ -121,7 +121,7 @@
 </div>
    </section>
    <!-- about coins -->
-   <section class="font-Dim p-10 mx-auto mt-10 max-w-[1300px]">
+   <section class="font-Dim p-2 tablet:p-10 mx-auto mt-10 max-w-[1300px]">
     <div class="w-full">
       <div class="flex w-full flex-col gap-6 mobile:gap-0 mobile:flex-row items-center justify-between mb-10">
         <div><h2 class="text-4xl font-bold">Learn crypto</h2></div>
@@ -135,8 +135,29 @@
           <li>Tutorlal</li>
         </ul>
       </div>
-
-
+      <!-- box item for about coins -->
+       <div class="grid grid-cols-1 laptop:grid-cols-2 laptop:gap-x-5 mt-8">
+        <div class="">
+          <div>
+               <div class="bg-green-200 rounded-xl w-full h-[550px]">
+                <img src="../assets/image/Composition_15 1.png" class="w-full h-full rounded-xl object-cover" alt="">
+               </div>
+               <div class="">
+                <div class="flex flex-col mobile:flex-row items-center justify-between px-5 py-3">
+                  <h2 class="text-center mobile:text-left mb-2 mobile:mb-0 text-2xl tablet:text-3xl">Leveraged tokens now <br> available</h2>
+                  <button class="border-2 w-[180px] rounded-full px-5 py-1 hover:bg-slate-200 transition-all">Learn more</button>
+                </div>
+                <p class="px-5 text-slate-400 text-center tablet:text-left tablet:max-w-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, obcaecati.</p>
+               </div>
+          </div>
+        </div>
+        <div class="mt-5 laptop:mt-0">
+          <ul>
+            <ItemCardCoinAbout></ItemCardCoinAbout>
+          </ul>
+        </div>
+       </div>
+      <!-- ------ -->
       </div>
   </section>
   <section class="font-Dim p-5 mobile:p-10  mx-auto max-w-[1300px]">
@@ -197,7 +218,7 @@
       <div>
         <ul class="flex flex-col tablet:flex-row gap-y-5 items-center  tablet:gap-x-5 justify-center">
           <li>
-            <div class="w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
               <img src="../assets/image/Composition_04 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
@@ -205,7 +226,7 @@
             </div>
           </li>
           <li>
-            <div class="w-[20rem] flex tablet:hidden laptop:flex h-[29rem] p-5 rounded-xl shadow-md flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] flex tablet:hidden laptop:flex h-[29rem] p-5 rounded-xl shadow-md flex-col items-center justify-center bg-white">
               <img src="../assets/image/Composition_11 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
@@ -213,7 +234,7 @@
             </div>
           </li>
           <li>
-            <div class="w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
               <img src="../assets/image/Composition_13 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
@@ -225,11 +246,11 @@
      </section>
      <!-- download app website section -->
       <section class="font-Dim  bg-white rounded-xl  0 mx-auto max-w-[1300px]">
-        <div class="flex items-center justify-center gap-x-14">
-          <div class="flex items-center flex-col">
+        <div class="flex items-center flex-col laptop:flex-row justify-center gap-x-14">
+          <div class="flex items-center flex-col mt-5 laptop:mt-0 p-2">
             <h2 class="text-4xl font-bold text-center">Trade anywhere</h2>
             <p class="text-sm text-slate-400 text-center mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus!</p>
-            <ul class="flex flex-col gap-y-5 child:cursor-pointer">
+            <ul class="flex items-center justify-center  laptop:flex-col gap-x-5 flex-wrap gap-y-5 child:cursor-pointer">
               <li class="flex items-center gap-x-5">
                 <span class="w-14 h-14 bg-black rounded-full flex items-center justify-center">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-7 h-7">
@@ -272,11 +293,15 @@
           </div>
         </div>
       </section>
-
+      <FooterComponent></FooterComponent>
+      <!-- footer finish  -->
   </div>
 </template>
 <script setup>
 import HeaderComponent from '../components/HeaderComponent.vue'
+import ItemCardCoinAbout from '../components/ItemCardCoinAbout.vue';
+import FooterComponent from '../components/FooterComponent.vue'
+
 import { ref, onMounted } from 'vue';
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale );
