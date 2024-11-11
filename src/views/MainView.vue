@@ -1,8 +1,10 @@
 <template>
-    <div class="bg-red-500">
-        <!-- ========== Start Section ========== --> 
-         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, reprehenderit?
-        <!-- ========== End Section ========== -->
-        
+    <div class="">
+        <!-- header main page  -->
+        <HeaderMainComponent></HeaderMainComponent>
+        <!-- header main page finish  -->
     </div>
 </template>
+<script setup>
+import HeaderMainComponent from '../components/HeaderMainComponent.vue';
+</script>
