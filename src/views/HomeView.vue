@@ -13,7 +13,7 @@
               <div class="w-full text-center laptop:text-left">
                 <h1 class="font-Dim font-bold text-[2.5rem] tablet:text-[3rem] desktop:text-[3.7em] leading-[3.5rem]">Buy & sell <br>crypto in minutes</h1>
                 <p class="my-5 px-1 tablet:px-0 max-w-[25rem]  text-slate-400 text-sm tracking-tight w-fit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, consequuntur. Id quibusdam provident </p>
-                <button type="button" class="bg-blue-500  text-white py-2 px-5 rounded-full shadow-md">Get start now</button>
+                <router-link to="/main"  class="bg-blue-500  text-white py-2 px-5 rounded-full shadow-md">Get start now</router-link>
                 <div class="mx-auto laptop:mx-0 flex items-center mt-16 mb-1 justify-center w-12 h-12 bg-white shadow-md rounded-full">
                   <span class=" cursor-pointer">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 text-blue-500">

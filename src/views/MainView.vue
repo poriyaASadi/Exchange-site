@@ -1,8 +1,9 @@
 <template>
-    <div class="">
+    <div class="w-full relative pt-3">
         <!-- header main page  -->
         <HeaderMainComponent></HeaderMainComponent>
         <!-- header main page finish  -->
+         
     </div>
 </template>
 <script setup>
