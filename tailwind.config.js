@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     './public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}' ,
     "./node_modules/flowbite/**/*.js"],
@@ -15,7 +16,7 @@ module.exports = {
         tablet : '768px',
         mobile : '550px'
       }
-    },
+    },  
   },
   plugins: [
     function ({addVariant}) {

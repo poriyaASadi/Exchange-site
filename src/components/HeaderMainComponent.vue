@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <div class="font-Dim max-w-[1300px] mx-auto shadow-md rounded-xl p-5">
+        <div class="font-Dim max-w-[1300px] mx-auto  rounded-xl p-5">
             <header class="mx-auto" data-aos="flip-up" data-aos-duration="800">
               <div class="flex items-center justify-between">
                  <!-- logo -->
@@ -34,7 +34,7 @@
                       <div class="hidden laptop:inline-block border-2 border-slate-300 rounded-full px-3 py-1 cursor-pointer">
                          Wallet
                       </div>
-                      <div class="cursor-pointer hidden laptop:inline-block">
+                      <div class="cursor-pointer hidden laptop:inline-block" @click="BtnSwitchTheme">
                          <!-- icon sun -->
                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" >
                              <path d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -106,6 +106,12 @@
 export default {
     name : 'HeaderMainComponent',
     data () {
+        return {
+        themes : 'light'
+        }
+    },
+    mounted () {
+        this.chekmode();
     },
     methods : {
         BtnSwitchMenu : function () {
@@ -114,7 +120,26 @@ export default {
             menuMobile.toggle('-top-[110lvh]');
             menuMobile.toggle('top-0');
             boxLiner.toggle('hidden');
-        }
+        },
+        BtnSwitchTheme : function () {
+            if (localStorage.theme === 'light') {
+                this.themes = 'dark'
+                localStorage.setItem('theme' , 'dark');
+             //   localStorage.theme = this.theme
+            }else {
+                this.themes = 'light'
+                localStorage.setItem('theme' , 'light');
+            }
+            this.chekmode()
+        },
+        chekmode : function () {
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark');
+} else {
+  document.documentElement.classList.remove('dark')
+}
+      },
     }
 }
 </script>
