@@ -1,9 +1,3 @@
-// let dataChart = new Array();
-// for (let i = 0 ; i < 15 ; i++) {
-//     const randomNumber = Math.floor(Math.random() * 100) 
-//     dataChart.push(randomNumber);
-// }
-
 export const data = [
     {
         id : 1 , 

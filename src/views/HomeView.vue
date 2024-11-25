@@ -307,44 +307,8 @@ import { Chart, LineController, LineElement, PointElement, LinearScale, Title, C
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale );
 import { data } from '../js/dataChart.js'
 
-const lineChartSeries = ref([
-    {
-      name : 'Sales',
-      data : [30 , 30 , 40 , 50 , 60]
-    }
-  ]);
-  const lineChartOptions = ref({
-    chart: {
-    toolbar: { show: false } ,
-    height: 150,
-  },
-    dataLabels: {enabled: false },
-            stroke: {curve: 'smooth'},
-            colors: ['#3A6FF8'],
-  fill: {
-    colors: ['#3A6FF8'],
-    type: 'gradient',
-    gradient: {
-      shadeIntensity: 1,
-      opacityFrom: 0.1,
-      opacityTo: 2,
-      stops: [0, 10]
-    }
-  },
-          xaxis : {
-          categories : ["jan" , "feb" , 'may' , 'apr'],
-          labels: { show: false },
-          axisBorder: { show: false }, 
-          axisTicks: { show: false } 
-          },
-          yaxis: { show: false },
-          grid: { show: false },
-          tooltip: {enabled : false},
-          legend: { show: false }
-  });
-
-const creatorTableChart = data.map((item , index) => {
-  return `
+  const creatorTableChart = data.map((item , index) => {
+    return `
      <tr class="child:border-b">
                     <td class="px-2 laptop:px-6 py-4 font-bold tracking-wide text-slate-600 text-md">
                       ${item.id}
@@ -367,7 +331,8 @@ const creatorTableChart = data.map((item , index) => {
                       </td>
                   </tr>
   `
-})
+});
+
 onMounted(() => {
   function genarytorchart (itemID , color , datachart) {
     const ctx = document.getElementById(itemID).getContext('2d');
@@ -399,8 +364,6 @@ onMounted(() => {
     }
   });
   }
-  // genarytorchart('chart1' , 'red');
-  // genarytorchart('chart2' , 'blue');
   for(let i = 0 ; i < 6 ; i++) {
     genarytorchart('chart' + i , `${data[i].change < 0 ? 'red' : 'green'}` , data[i].chart.ChartDadas);
   }

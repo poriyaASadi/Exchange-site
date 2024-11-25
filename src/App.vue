@@ -9,7 +9,7 @@ document.documentElement.classList.toggle('dark',
 <style>
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0px !important;
 }
 
 /* Track */
