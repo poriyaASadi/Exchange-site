@@ -66,13 +66,13 @@
             <input type="text" name="" id="" placeholder="Exchange" class="border-2 shadow-md border-slate-300 dark:border-slate-600 dark:bg-black w-full py-2 px-2 rounded-lg cursor-text outline-none"/>
             </div>
             <div class="grid grid-cols-2 gap-5 child:shadow-md dark:child:border-slate-600">
-                <div class="cursor-pointer laptop:inline-block  border-slate-300 border-2 rounded-full py-1">
+                <div @click="BtnSwitchTheme" class="cursor-pointer laptop:inline-block  border-slate-300 border-2 rounded-full py-1">
                     <!-- icon sun -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto">
+                    <svg ref="sun_header" width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto">
                         <path d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <!-- icon moon -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="hidden mx-auto">
+                        <svg ref="moon_header" width="24" height="24" viewBox="0 0 24 24" fill="none" class="hidden mx-auto">
                             <path d="M9 6C9 10.9706 13.0294 15 18 15C18.9093 15 19.787 14.8655 20.6144 14.6147C19.4943 18.3103 16.0613 20.9999 12 20.9999C7.02944 20.9999 3 16.9707 3 12.0001C3 7.93883 5.69007 4.50583 9.38561 3.38574C9.13484 4.21311 9 5.09074 9 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                                
                  </div>
@@ -86,7 +86,7 @@
                         <option value="PR">Persian</option>
                     </select>
                 </div>
-                 <div class="border-2 border-slate-300 rounded-full flex items-center justify-center">
+                 <div class="border-2 border-slate-300 rounded-full flex items-center justify-center" >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" >
                         <path d="M18 12V17C18 18.6569 15.3137 20 12 20C8.68629 20 6 18.6569 6 17V12M18 12V7M18 12C18 13.6569 15.3137 15 12 15C8.68629 15 6 13.6569 6 12M18 7C18 5.34315 15.3137 4 12 4C8.68629 4 6 5.34315 6 7M18 7C18 8.65685 15.3137 10 12 10C8.68629 10 6 8.65685 6 7M6 12V7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                            

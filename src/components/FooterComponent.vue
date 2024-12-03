@@ -1,6 +1,6 @@
 <template>
-    <div class="font-Dim mt-10">
-        <div class="bg-white">
+    <div class="font-Dim mt-10 dark:bg-black">
+        <div class="">
             <div class="w-full grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 child:py-12 px-5 mobile:px-20">
                 <div class="">
                     <span class="font-bold tracking-wide text-lg">CONTACT</span>
@@ -33,7 +33,7 @@
                         <p class="max-w-[350px] text-left py-5 text-sm text-slate-400 text-justify mobile:text-left">
                             Lorem ipsum dolor sit amet consectetur adipisicing edivt. Repellat quibusdam nostrum reprehenderit. Impedit, aspernatur voluptates.
                         </p>
-                        <div class="flex items-center p-2 max-w-[300px] gap-x-2 flex-row-reverse  rounded-full border-2 border-slate-400">
+                        <div class="flex items-center p-2 max-w-[300px] gap-x-2 flex-row-reverse  rounded-full border-2 border-slate-400 dark:border-slate-500">
                             <span class="rounded-full min-w-10 min-h-10 flex items-center justify-center cursor-pointer bg-blue-500">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-5 h-5">
                                     <path d="M21 12L16 7M21 12L16 17M21 12H3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-slate-200 flex flex-wrap items-center justify-between p-5 tablet:px-20">
+            <div class="border-t border-slate-200 dark:border-slate-500 flex flex-wrap items-center justify-between p-5 tablet:px-20">
                 <p class="text-slate-400">Copyright C 2024 UI8 LLC. All rights reserved</p>
                 <div class="flex items-center gap-x-5 child:w-5 child:h-5">
                     <div>

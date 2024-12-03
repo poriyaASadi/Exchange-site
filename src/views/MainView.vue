@@ -155,12 +155,12 @@
           <!-- section table charts coins end  -->
            <section class="max-w-[1300px] mx-auto p-2">
             <div class="text-center mb-5">
-                <h2 class="text-5xl mb-2 tracking-tight">Learn and earn</h2>
+                <h2 class="text-2xl mobile:text-3xl tablet:text-5xl mb-2 tracking-tight">Learn and earn</h2>
                 <p class="text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <span class="text-slate-400">Lorem ipsum dolor sit amet.</span>
             </div>
-            <div class="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-3 gap-3">
-                <div class="max-w-[25rem]">
+            <div class="grid grid-cols-1 child:mx-auto mobile:grid-cols-2 tablet:grid-cols-3 gap-5">
+                <div class="w-full mobile:max-w-[25rem] border-b pb-5 px-3 border-slate-300 dark:border-none">
                     <!-- video box -->
                      <div>
                         <video
@@ -171,21 +171,21 @@
                         width="640"
                         height="264"
                         poster="../assets/image/poster/01.png"
-                        data-setup="{}"
+                        data-setup="{background-size : cover}"
                       >
                         <source src="../assets/videos/Designed for Mac. Accessories for your Mac.mp4" type="video/mp4" />
                       </video>
                      </div>
                      <div class="my-8 text-sm">
                         <span class="bg-orange-500 text-white py-1 px-2 rounded-sm">NEW</span>
-                        <p class="py-1 text-2xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
+                        <p class="py-1 text-xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
                      </div>
                      <div class="flex items-center justify-between text-slate-300">
                         <div class="flex items-center justify-center gap-x-2"><div class="w-5 h-5 rounded-full bg-green-400"></div><p>Floyd Bridge</p></div>
                         <div><span>Feb 03,2021</span></div>
                      </div>
                 </div>
-                <div class="max-w-[25rem]">
+                <div class="w-full mobile:max-w-[25rem] border-b pb-5 px-3 border-slate-300 dark:border-none">
                     <!-- video box -->
                      <div>
                         <video
@@ -195,22 +195,22 @@
                         preload="auto"
                         width="640"
                         height="264"
-                        poster="../assets/image/poster/02.png"
-                        data-setup="{}"
+                        poster="../assets/image/poster/01.png"
+                        data-setup="{background-size : cover}"
                       >
                         <source src="../assets/videos/Designed for Mac. Accessories for your Mac.mp4" type="video/mp4" />
                       </video>
                      </div>
                      <div class="my-8 text-sm">
-                        <span class="bg-green-500 text-white py-1 px-2 rounded-sm">POPULAR</span>
-                        <p class="py-1 text-2xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
+                        <span class="bg-orange-500 text-white py-1 px-2 rounded-sm">NEW</span>
+                        <p class="py-1 text-xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
                      </div>
                      <div class="flex items-center justify-between text-slate-300">
                         <div class="flex items-center justify-center gap-x-2"><div class="w-5 h-5 rounded-full bg-green-400"></div><p>Floyd Bridge</p></div>
                         <div><span>Feb 03,2021</span></div>
                      </div>
                 </div>
-                <div class="w-full tablet:max-w-[25rem] mobile:col-span-2 tablet:col-span-1">
+                <div class="w-full tablet:max-w-[25rem] mobile:col-span-2 px-3 pb-5 tablet:col-span-1 border-b border-slate-300 dark:border-none">
                     <!-- video box -->
                      <div>
                         <video
@@ -228,7 +228,7 @@
                      </div>
                      <div class="my-8 text-sm">
                         <span class="bg-blue-500 text-white py-1 px-2 rounded-sm">FEATURED</span>
-                        <p class="py-1 text-2xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
+                        <p class="py-1 text-xl tracking-tight text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ab?</p>
                      </div>
                      <div class="flex items-center justify-between text-slate-300">
                         <div class="flex items-center justify-center gap-x-2"><div class="w-5 h-5 rounded-full bg-green-400"></div><p>Floyd Bridge</p></div>
@@ -238,14 +238,22 @@
                 
             </div>
            </section>
+           <!-- btn load more  -->
+            <div class="mt-5">
+                <div class="w-fit py-1 px-4 rounded-full cursor-pointer text-md mx-auto border-2 dark:border-slate-500 border-slate-200">
+                    Load more 
+                </div>
+            </div>
+            <!-- btn load  finish-->
+             <FooterComponent></FooterComponent>
     </div>
 </template>
 <script setup>
 import { onMounted , onBeforeMount } from 'vue'
 import HeaderMainComponent from '../components/HeaderMainComponent.vue';
+import FooterComponent from '../components/FooterComponent.vue'
 import * as echarts from 'echarts';
 import { dataHeadChart } from '../js/dataChartMain';
-import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import 'videojs-watermark';
 let ChartIndex = [];
@@ -368,12 +376,5 @@ function btn_active_star () {
 
 </script>
 <style scoped>
-  .video-js .vjs-poster {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .video-js .vjs-icon-placeholder {
-    border-radius: 50% !important;
-  }
+
 </style>
