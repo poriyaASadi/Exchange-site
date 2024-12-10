@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-0 left-0 w-full h-[6rem] child:font-Dim border-b bg-slate-50 shadow-sm z-10">
+    <div class="fixed top-0 left-0 w-full h-[6rem] child:font-Dim border-b bg-slate-50 dark:border-slate-700 dark:bg-black shadow-sm z-10">
         <div class="flex items-center justify-between w-full  relative h-full px-2 tablet:px-5  laptop:px-20 desktop:px-32   z-0">
             <!-- left header -->
             <div class="flex items-center  gap-x-5 laptop:gap-x-20">
@@ -28,7 +28,7 @@
                 <!-- btn login and sign up  -->
                 <div class="items-center flex gap-x-2 child:cursor-pointer">
                     <router-link class="bg-blue-500 font-[400] text-white py-2 px-5 rounded-full" to="/signup">Sign up</router-link>
-                    <router-link  class="border border-slate-300 rounded-full px-6 py-2 font-[600]" to="/login">login</router-link>
+                    <router-link  class="border border-slate-300 dark:border-slate-700 dark:border-2 rounded-full px-6 py-2 font-[600]" to="/login">login</router-link>
                 </div>
                 <!-- end -->
             </div>

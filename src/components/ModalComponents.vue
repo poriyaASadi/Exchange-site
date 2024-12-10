@@ -45,11 +45,11 @@ export default {
         }
     },
     mounted () {
-        this.BoxAlert = this.$refs.BoxAlert
-        setTimeout(() => {
-            this.BoxAlert.classList.remove('hidden');
-            this.BoxAlert.classList.add('flex');
-        }, 5000);
+        // this.BoxAlert = this.$refs.BoxAlert
+        // setTimeout(() => {
+        //     this.BoxAlert.classList.remove('hidden');
+        //     this.BoxAlert.classList.add('flex');
+        // }, 5000);
     },
     methods : {
         clickHandler () {

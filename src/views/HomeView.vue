@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-50 relative">
+  <div class="bg-slate-50 dark:bg-black dark:text-slate-100 relative">
     <!-- header -->
     <HeaderComponent></HeaderComponent>
     <section class=" mt-[6rem] font-Dim">
@@ -29,7 +29,7 @@
    <section class="mt-14 laptop:mt-0 px-2 mobile:px-0 w-full">
   <!-- box coins favorites . . .  -->
 <div  class="flex items-center justify-center font-Dim">
-<div class="desktop:bg-[#F4F5F6]  desktop:py-10 desktop:px-9  rounded-[2rem] ">
+<div class="desktop:bg-[#F4F5F6] dark:bg-slate-900  desktop:py-10 desktop:px-9  rounded-[2rem] ">
  <ul class="flex flex-col mobile:flex-row mobile:flex-wrap mobile:justify-center  items-center gap-y-12 mobile:gap-y-0 mobile:gap-2 tablet:gap-7 laptop:gap-x-12 child:shadow-lg desktop:child:shadow-none child:transition-shadow child:delay-100 child-hover:shadow-lg">
    <li class="rounded-xl">
      <div class="w-[17rem] h-[13rem] rounded-xl cursor-pointer   p-5 px-2 laptop:px-6 ">
@@ -125,7 +125,7 @@
     <div class="w-full">
       <div class="flex w-full flex-col gap-6 mobile:gap-0 mobile:flex-row items-center justify-between mb-10">
         <div><h2 class="text-4xl font-bold">Learn crypto</h2></div>
-        <div><span class="py-2 px-5 border shadow-sm rounded-full ">View more</span></div>
+        <div><span class="py-2 px-5 border dark:border-slate-700 dark:border-2 shadow-sm rounded-full ">View more</span></div>
     </div>
       <div class="">
         <ul class="flex items-center flex-wrap gap-3 child:py-1 child-hover:text-white child-hover:font-normal child-hover:bg-slate-800 cursor-pointer child:text-slate-400 child:px-5 child:rounded-full child:font-[600]">
@@ -145,7 +145,7 @@
                <div class="">
                 <div class="flex flex-col mobile:flex-row items-center justify-between px-5 py-3">
                   <h2 class="text-center mobile:text-left mb-2 mobile:mb-0 text-2xl tablet:text-3xl">Leveraged tokens now <br> available</h2>
-                  <button class="border-2 w-[180px] rounded-full px-5 py-1 hover:bg-slate-200 transition-all">Learn more</button>
+                  <router-link to="/about" class="border-2 w-[180px] rounded-full px-5 py-1 hover:bg-slate-200 dark:hover:bg-slate-800 dark:hover:border-slate-700 transition-all flex items-center justify-center">Learn more</router-link>
                 </div>
                 <p class="px-5 text-slate-400 text-center tablet:text-left tablet:max-w-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, obcaecati.</p>
                </div>
@@ -164,7 +164,7 @@
     <div>
       <div class="flex flex-col gap-6 mobile:gap-0 mobile:flex-row items-center justify-between mb-10">
         <div><h2 class="text-4xl font-bold">Market trend</h2></div>
-        <div><span class="py-2 px-5 border shadow-sm rounded-full ">View more</span></div>
+        <div><span class="py-2 px-5 border shadow-sm rounded-full dark:border-slate-700 dark:border-2">View more</span></div>
       </div>
       <div class="">
         <ul class="flex items-center flex-wrap gap-3 child:py-1 child-hover:text-white child-hover:font-normal child-hover:bg-slate-800 cursor-pointer child:text-slate-400 child:px-5 child:rounded-full child:font-[600]">
@@ -181,8 +181,8 @@
        <div class="mt-10">
         <div class="relative overflow-x-auto">
             <table class="w-full text-sm !font-Dim   text-center rtl:text-right ">
-                <thead class="text-xs child:font-bold text-center  child:text-slate-400 border-b-2 pb-3 uppercase ">
-                    <tr class="border-t-2">
+                <thead class="text-xs child:font-bold text-center  child:text-slate-400 border-b-2 dark:border-slate-700 pb-3 uppercase ">
+                    <tr class="border-t-2 dark:border-slate-700">
                       <th scope="col" class="px-6 py-3">
                         #
                     </th>
@@ -218,41 +218,41 @@
       <div>
         <ul class="flex flex-col tablet:flex-row gap-y-5 items-center  tablet:gap-x-5 justify-center">
           <li>
-            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white dark:bg-slate-900">
               <img src="../assets/image/Composition_04 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
-              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 rounded-full">Buy crypto</a>
+              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 dark:border-slate-700 rounded-full">Buy crypto</a>
             </div>
           </li>
           <li>
-            <div class="max-w-[20rem] flex tablet:hidden laptop:flex h-[29rem] p-5 rounded-xl shadow-md flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] flex tablet:hidden laptop:flex h-[29rem] p-5 rounded-xl shadow-md flex-col items-center justify-center bg-white dark:bg-slate-900">
               <img src="../assets/image/Composition_11 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
-              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 rounded-full">Trade now</a>
+              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 dark:border-slate-700 rounded-full">Trade now</a>
             </div>
           </li>
           <li>
-            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white">
+            <div class="max-w-[20rem] h-[26rem] p-5 rounded-xl shadow-sm flex flex-col items-center justify-center bg-white dark:bg-slate-900">
               <img src="../assets/image/Composition_13 1.png" alt="" class="mb-5 w-fit h-fit">
               <h3 class="text-center text-lg font-bold">Trade Assets</h3>
               <p class="text-center py-3 text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem veniam illo, modi excepturi vel sequi possimus at totam dolorem ipsa.</p>
-              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 rounded-full">Learn now</a>
+              <a href="#" class="py-2 px-4 text-sm border-2 border-slate-400 dark:border-slate-700 rounded-full">Learn now</a>
             </div>
           </li>
         </ul>
       </div>
      </section>
      <!-- download app website section -->
-      <section class="font-Dim  bg-white rounded-xl  0 mx-auto max-w-[1300px]">
+      <section class="font-Dim  bg-white dark:bg-slate-900 rounded-xl  0 mx-auto max-w-[1300px]">
         <div class="flex items-center flex-col laptop:flex-row justify-center gap-x-14">
           <div class="flex items-center flex-col mt-5 laptop:mt-0 p-2">
             <h2 class="text-4xl font-bold text-center">Trade anywhere</h2>
             <p class="text-sm text-slate-400 text-center mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus!</p>
             <ul class="flex items-center justify-center  laptop:flex-col gap-x-5 flex-wrap gap-y-5 child:cursor-pointer">
               <li class="flex items-center gap-x-5">
-                <span class="w-14 h-14 bg-black rounded-full flex items-center justify-center">
+                <span class="w-14 h-14 bg-black dark:bg-slate-800 rounded-full flex items-center justify-center">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-7 h-7">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3137 22.3726C12.8284 22.1716 12.4142 22 12 22C11.5858 22 11.1716 22.1716 10.6863 22.3726C10 22.6569 9.17157 23 8 23C5 23 2.99997 17.9998 3 14C3.00003 10.0002 4 6 8 6C9.0718 6 9.71281 6.28719 10.3078 6.55375C10.8231 6.78461 11.3038 7 12 7C12.6962 7 13.1769 6.78461 13.6922 6.55375C14.2872 6.28719 14.9282 6 16 6C18.2181 6 19.5138 7.23009 20.2279 9.00809L20.2336 9.02233C20.3336 9.2727 20.422 9.53386 20.5 9.80393C20.5876 10.1074 20.6619 10.4221 20.7243 10.7454C20.7503 10.8801 20.6372 11 20.5 11C19.1193 11 18 12.1193 18 13.5C18 14.8807 19.1193 16 20.5 16C20.6754 16 20.8243 16.1495 20.7946 16.3224C20.7171 16.7724 20.6185 17.2208 20.5 17.6602C20.4696 17.773 20.4378 17.8853 20.4048 17.9968L20.4041 17.999C19.599 20.7152 18.028 23 16 23C14.8284 23 14 22.6569 13.3137 22.3726ZM12 20C11.1714 20 10.4155 20.3174 10.0073 20.4887C9.3592 20.7608 8.71303 21 8 21C7.70005 21 6.95842 20.6947 6.16385 19.1055C5.43774 17.6533 4.99999 15.7127 5 14C5.00001 12.1022 5.24783 10.4766 5.78887 9.39448C6.04525 8.88172 6.3359 8.5548 6.64068 8.35161C6.93294 8.15676 7.34999 8 8 8C8.34662 8 8.59033 8.04494 8.78421 8.10023C8.99677 8.16085 9.18406 8.24184 9.49009 8.37895L9.53985 8.40128C10.0616 8.63559 10.8731 9 12 9C13.1269 9 13.9384 8.63558 14.4602 8.40128L14.5099 8.37895C14.8159 8.24185 15.0032 8.16085 15.2158 8.10023C15.4097 8.04494 15.6534 8 16 8C16.7144 8 17.1538 8.18873 17.4605 8.42402C17.7602 8.65398 18.0486 9.01925 18.2966 9.57542C16.9259 10.3466 16 11.8152 16 13.5C16 15.2517 17.0008 16.7696 18.4618 17.5131C18.1105 18.6679 17.6292 19.6219 17.1142 20.2498C16.5826 20.898 16.1964 21 16 21C15.287 21 14.6408 20.7608 13.9927 20.4887C13.5845 20.3174 12.8286 20 12 20Z" fill="#FCFCFD"/>
                     <path d="M12 4.75C12 2.67893 13.6789 1 15.75 1C15.8881 1 16 1.11193 16 1.25C16 3.32107 14.3211 5 12.25 5C12.1119 5 12 4.88807 12 4.75Z" fill="#FCFCFD"/>
@@ -275,7 +275,7 @@
                 </div>
               </li>
               <li class="flex items-center gap-x-5">
-                <span class="w-14 h-14 bg-black rounded-full flex items-center justify-center">
+                <span class="w-14 h-14 bg-black dark:bg-slate-800 rounded-full flex items-center justify-center">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-7 h-7">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3137 22.3726C12.8284 22.1716 12.4142 22 12 22C11.5858 22 11.1716 22.1716 10.6863 22.3726C10 22.6569 9.17157 23 8 23C5 23 2.99997 17.9998 3 14C3.00003 10.0002 4 6 8 6C9.0718 6 9.71281 6.28719 10.3078 6.55375C10.8231 6.78461 11.3038 7 12 7C12.6962 7 13.1769 6.78461 13.6922 6.55375C14.2872 6.28719 14.9282 6 16 6C18.2181 6 19.5138 7.23009 20.2279 9.00809L20.2336 9.02233C20.3336 9.2727 20.422 9.53386 20.5 9.80393C20.5876 10.1074 20.6619 10.4221 20.7243 10.7454C20.7503 10.8801 20.6372 11 20.5 11C19.1193 11 18 12.1193 18 13.5C18 14.8807 19.1193 16 20.5 16C20.6754 16 20.8243 16.1495 20.7946 16.3224C20.7171 16.7724 20.6185 17.2208 20.5 17.6602C20.4696 17.773 20.4378 17.8853 20.4048 17.9968L20.4041 17.999C19.599 20.7152 18.028 23 16 23C14.8284 23 14 22.6569 13.3137 22.3726ZM12 20C11.1714 20 10.4155 20.3174 10.0073 20.4887C9.3592 20.7608 8.71303 21 8 21C7.70005 21 6.95842 20.6947 6.16385 19.1055C5.43774 17.6533 4.99999 15.7127 5 14C5.00001 12.1022 5.24783 10.4766 5.78887 9.39448C6.04525 8.88172 6.3359 8.5548 6.64068 8.35161C6.93294 8.15676 7.34999 8 8 8C8.34662 8 8.59033 8.04494 8.78421 8.10023C8.99677 8.16085 9.18406 8.24184 9.49009 8.37895L9.53985 8.40128C10.0616 8.63559 10.8731 9 12 9C13.1269 9 13.9384 8.63558 14.4602 8.40128L14.5099 8.37895C14.8159 8.24185 15.0032 8.16085 15.2158 8.10023C15.4097 8.04494 15.6534 8 16 8C16.7144 8 17.1538 8.18873 17.4605 8.42402C17.7602 8.65398 18.0486 9.01925 18.2966 9.57542C16.9259 10.3466 16 11.8152 16 13.5C16 15.2517 17.0008 16.7696 18.4618 17.5131C18.1105 18.6679 17.6292 19.6219 17.1142 20.2498C16.5826 20.898 16.1964 21 16 21C15.287 21 14.6408 20.7608 13.9927 20.4887C13.5845 20.3174 12.8286 20 12 20Z" fill="#FCFCFD"/>
                     <path d="M12 4.75C12 2.67893 13.6789 1 15.75 1C15.8881 1 16 1.11193 16 1.25C16 3.32107 14.3211 5 12.25 5C12.1119 5 12 4.88807 12 4.75Z" fill="#FCFCFD"/>
@@ -309,12 +309,12 @@ import { data } from '../js/dataChart.js'
 
   const creatorTableChart = data.map((item , index) => {
     return `
-     <tr class="child:border-b">
-                    <td class="px-2 laptop:px-6 py-4 font-bold tracking-wide text-slate-600 text-md">
+     <tr class="child:border-b child:dark:border-slate-700 child:dark:text-slate-300">
+                    <td class="px-2 laptop:px-6 dark:!text-slate-500 py-4 font-bold tracking-wide text-slate-600 text-md">
                       ${item.id}
                   </td>
                       <th scope="row" class="px-2 laptop:px-6 py-4 font-medium  whitespace-nowrap ">
-                          <div class="flex items-center gap-x-3 font-bold tracking-wide text-slate-600 text-md">
+                          <div class="flex items-center gap-x-3 font-bold tracking-wide text-slate-600 dark:text-slate-300 text-md">
                             ${item.svg}
                               ${item.name}                       
                           </div>
@@ -327,7 +327,7 @@ import { data } from '../js/dataChart.js'
                         <canvas id="${'chart' + index}" class="w-[15rem] overflow-x-auto !h-[4rem]"></canvas>
                     </td>
                       <td class="px-3 py-2">
-                          <a href="#" class="font-bold text-md  border-2 py-2 px-7 text-slate-500  rounded-full">Trade</a>
+                          <a href="#" class="font-bold text-md  border-2 dark:border-slate-700 dark:text-slate-300 py-2 px-7 text-slate-500  rounded-full">Trade</a>
                       </td>
                   </tr>
   `
