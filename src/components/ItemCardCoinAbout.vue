@@ -1,5 +1,5 @@
 <template>
-    <li><div class="tablet:h-[230px] mb-5 shadow-sm bg-white rounded-xl flex flex-col items-center tablet:flex-row-reverse justify-between p-3">
+    <li><div class="tablet:h-[230px] mb-5 shadow-sm bg-white dark:bg-slate-900 rounded-xl flex flex-col items-center tablet:flex-row-reverse justify-between p-3">
         <div class="h-[250px] tablet:h-full w-full tablet:w-[250px] shadow-sm bg-purple-300 rounded-xl">
           <img src="../assets/image/Composition_06 1.png" class="mx-auto tablet:w-full tablet:h-full  tablet:object-cover" alt="image-card">
         </div >

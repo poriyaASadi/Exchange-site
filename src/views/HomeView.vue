@@ -16,7 +16,7 @@
                 <router-link to="/main"  class="bg-blue-500  text-white py-2 px-5 rounded-full shadow-md">Get start now</router-link>
                 <div class="mx-auto laptop:mx-0 flex items-center mt-16 mb-1 justify-center w-12 h-12 bg-white shadow-md rounded-full">
                   <span class=" cursor-pointer">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 text-blue-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 text-blue-500" @click="goingDown($event)">
                       <path d="M12 5V19M12 19L18 13M12 19L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>                  
                   </span>
@@ -121,7 +121,7 @@
 </div>
    </section>
    <!-- about coins -->
-   <section class="font-Dim p-2 tablet:p-10 mx-auto mt-10 max-w-[1300px]">
+   <section ref="about-coin" class="font-Dim p-2 tablet:p-10 mx-auto mt-10 max-w-[1300px]">
     <div class="w-full">
       <div class="flex w-full flex-col gap-6 mobile:gap-0 mobile:flex-row items-center justify-between mb-10">
         <div><h2 class="text-4xl font-bold">Learn crypto</h2></div>
@@ -154,13 +154,15 @@
         <div class="mt-5 laptop:mt-0">
           <ul>
             <ItemCardCoinAbout></ItemCardCoinAbout>
+            <ItemCardCoinAbout></ItemCardCoinAbout>
+            <ItemCardCoinAbout></ItemCardCoinAbout>
           </ul>
         </div>
        </div>
       <!-- ------ -->
       </div>
   </section>
-  <section class="font-Dim p-5 mobile:p-10  mx-auto max-w-[1300px]">
+  <section ref="input" class="font-Dim p-5 mobile:p-10  mx-auto max-w-[1300px]">
     <div>
       <div class="flex flex-col gap-6 mobile:gap-0 mobile:flex-row items-center justify-between mb-10">
         <div><h2 class="text-4xl font-bold">Market trend</h2></div>
@@ -298,15 +300,13 @@
   </div>
 </template>
 <script setup>
+import { ref , onMounted , useTemplateRef } from 'vue';
 import HeaderComponent from '../components/HeaderComponent.vue'
 import ItemCardCoinAbout from '../components/ItemCardCoinAbout.vue';
 import FooterComponent from '../components/FooterComponent.vue'
-
-import { ref, onMounted } from 'vue';
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale );
 import { data } from '../js/dataChart.js'
-
   const creatorTableChart = data.map((item , index) => {
     return `
      <tr class="child:border-b child:dark:border-slate-700 child:dark:text-slate-300">
@@ -332,7 +332,7 @@ import { data } from '../js/dataChart.js'
                   </tr>
   `
 });
-
+const directionAbout_section = useTemplateRef('about-coin')
 onMounted(() => {
   function genarytorchart (itemID , color , datachart) {
     const ctx = document.getElementById(itemID).getContext('2d');
@@ -367,5 +367,14 @@ onMounted(() => {
   for(let i = 0 ; i < 6 ; i++) {
     genarytorchart('chart' + i , `${data[i].change < 0 ? 'red' : 'green'}` , data[i].chart.ChartDadas);
   }
-});    
+});
+const goingDown  = (e) => {
+  console.log(directionAbout_section.value.scrollHeight);
+    
+  window.scrollTo({
+    top : window.scrollY + directionAbout_section.value.scrollHeight + 100 , 
+    behavior : 'smooth'
+  })
+
+}  
 </script>

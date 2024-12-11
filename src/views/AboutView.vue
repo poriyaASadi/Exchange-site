@@ -97,7 +97,7 @@
              <section>
                 <div class="max-w-[1000px] mx-auto mt-32">
                     <div class="flex items-center justify-between border-b pb-5">
-                        <h4 class="text-2xl">Search anything about crypto</h4>
+                        <h4 class="text-2xl dark:text-slate-100">Search anything about crypto</h4>
                         <span class="bg-blue-500 w-11 h-11 rounded-full flex items-center justify-center">
                             <BxSearchAlt class="w-6 h-6 text-white"/>
                         </span>
@@ -128,57 +128,72 @@
     </div>
                         </div>
                         <div>
-                            <ul class="flex items-center gap-x-5 flex-wrap child:text-slate-400">
-                                <li class="bg-black !text-white dark:bg-white dark:!text-black py-1 px-3 rounded-full">Tutorial</li>
-                                <li>Usecase</li>
-                                <li>Trading</li>
-                                <li>Wallet</li>
+                            <ul class="flex items-center gap-x-5 flex-wrap child:text-slate-400 child-hover:cursor-pointer">
+                                <li @click="filterType = '' " class="bg-black !text-white dark:bg-white dark:!text-black py-1 px-3 rounded-full">Tutorial</li>
+                                <li @click="filterType = 'case'  ">Usecase</li>
+                                <li @click="filterType = 'trad'  ">Trading</li>
+                                <li @click="filterType = 'wallet'  ">Wallet</li>
                             </ul>
                         </div>
                      </div>
                      <!-- --------------- -->
-                      <div class="mt-10 grid">
+                      <div class="mt-10 transition-all delay-150 grid grid-cols-3 gap-x-5 gap-y-10">
          <!-- post box -->
-         <div class="max-w-[300px]" v-for="post in dataPost" :key="post.id">
+         <div class="max-w-[300px]" v-for="post in filterCartd" :key="post.id">
             <div>
-              <!-- image box post -->
-                 <div class="w-full relative">
-                  <img  src="" class="w-full h-full object-cover rounded-xl" alt="cover-image">
-                  <span class="absolute top-2 left-5 text-sm bg-violet-500 text-white py-[.3rem] tracking-tight px-2 rounded-sm">Video TUTORIAL</span>
-                 </div>
-                 <!-- main title post box -->
-                  <div class="mt-3 flex items-center justify-between">
-                      <div class="flex items-center gap-x-3">
-                          <img src="../assets/image/Composition_08 1.png" alt="img" class="rounded-full bg-slate-100 object-cover w-10 h-10">
-                          <div>
-                              <h6 class="text-lg font-bold">TOP 7 NFT usecase</h6>
-                              <p class="text-sm text-slate-400">first name last name</p>
-                          </div>
-                      </div>
-                      <div class="">
-                          <span class="text-sm border-2 border-green-500 text-green-500 font-[600] py-[.2rem] px-2 cursor-pointer rounded-md">POPULAR</span>
-                      </div>
-                  </div>
-            </div>
+                <!-- image box post -->
+                   <div class="w-full relative">
+                    <img v-bind:key="post.id" src="../assets/image/Composition_15 1.png" class="w-full h-full object-cover rounded-xl bg-slate-100 dark:bg-slate-700" v-bind:alt="post.name">
+                    <span class="absolute top-2 left-5 text-sm text-white py-[.3rem] tracking-tight px-2 rounded-[.3rem]" :style="post.shortCatcolor ? `background-color: ${post.shortCatcolor}` : '' ">{{post.shortCat}}</span>
+                   </div>
+                   <!-- main title post box -->
+                    <div class="mt-3 flex items-center justify-between">
+                        <div class="flex items-center gap-x-3">
+                            <img src="../assets/image/Composition_08 1.png" alt="img" class="rounded-full bg-slate-100 object-cover w-10 h-10">
+                            <div>
+                                <h6 class="text-lg font-bold dark:text-slate-100">{{post.name}}</h6>
+                                <p class="text-sm text-slate-400">{{post.about}}</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <span class="text-sm border-2 border-green-500 text-green-500 font-[600] py-[.2rem] px-2 cursor-pointer rounded-md">POPULAR</span>
+                        </div>
+                    </div>
+              </div>
        </div>
        <!-- post box END -->
                       </div>
                 </div>
              </section>
+             <!-- finish search anything box -->
+              <section class="mt-20">
+                <div class="flex items-center justify-center flex-col text-center mb-10">
+                    <span class="flex items-center gap-x-1 font-[600] dark:text-slate-300"><img src="../assets/image/logo symbol.png" alt="logo">BitCloud</span>
+                    <h2 class="text-4xl py-2 font-bold dark:text-slate-100">Stay in the Know on <br>crypto with BitCloud</h2>
+                    <p class="text-sm text-slate-300">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <!-- slide -->
+
+              </section>
     </div>
  </main>
  <FooterComponent></FooterComponent>
 </div>
 </template>
 <script setup>
-import { onMounted } from 'vue';
+import { computed, onMounted , ref } from 'vue';
  import HeaderMainComponent from '@/components/HeaderMainComponent.vue';
  import FooterComponent from '@/components/FooterComponent.vue'
  import { BxSearchAlt } from '@kalimahapps/vue-icons';
- import { dataPost } from '../js/dataPostAbout.js';
-
- 
+ import { dataPost } from '../js/dataPostAbout.js'; 
+const filterType = ref('');
+const filterCartd = computed(() => {
+    let data_Post = ref(dataPost);
+  if (filterType.value) {
+    return data_Post.value.filter(item => item.type == filterType.value);
+  }
+  return data_Post.value
+})
 </script>
 <style scoped>
-
 </style>

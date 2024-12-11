@@ -20,6 +20,14 @@
       "id": "b1f69721-65f1-43ad-b810-bff4fde6236a"
     }
   ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ],
   "backups": [],
   "activity": []
 }
