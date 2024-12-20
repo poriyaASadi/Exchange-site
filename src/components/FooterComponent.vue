@@ -46,7 +46,7 @@
             </div>
             <div class="border-t border-slate-200 dark:border-slate-700 flex flex-wrap items-center justify-between p-5 tablet:px-20">
                 <p class="text-slate-400">Copyright C 2024 UI8 LLC. All rights reserved</p>
-                <div class="flex items-center gap-x-5 child:w-5 child:h-5">
+                <div class="flex items-center gap-x-5 mt-3 child:w-5 child:h-5">
                     <div>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-slate-400 hover:text-slate-600 cursor-pointer">
                             <g clip-path="url(#clip0_1_226)">
